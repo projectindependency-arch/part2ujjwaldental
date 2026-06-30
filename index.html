@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ujjawal Dental Clinic and Implant Centre</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            deepBlue: '#0F172A', // Dark Slate
+                            royalBlue: '#1E3A8A', // Deep Royal Blue
+                            mintGreen: '#10B981', // Premium Mint Green
+                            mintLight: '#D1FAE5', // Soft Mint BG Accent
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #F0FDFA;
+            overflow-x: hidden;
+        }
+
+        /* Subtle modern design layout grid */
+        .grid-bg {
+            background-size: 40px 40px;
+            background-image:
+                linear-gradient(to right, rgba(15, 23, 42, 0.02) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(15, 23, 42, 0.02) 1px, transparent 1px);
+        }
+
+        /* Fluid pulsing animation for blueprint hotspots */
+        @keyframes blueprint-pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 0.4;
+            }
+
+            50% {
+                transform: scale(1.6);
+                opacity: 0.9;
+            }
+        }
+
+        .node-pulse {
+            animation: blueprint-pulse 3s infinite ease-in-out;
+        }
+
+        /* Smooth Cascade Fade-In Animation */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in-up {
+            opacity: 0;
+            animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        /* High-tech pulsing glowing border for the featured card */
+        @keyframes nodePulse {
+
+            0%,
+            100% {
+                border-color: rgba(16, 185, 129, 0.35);
+                box-shadow: 0 0 12px rgba(16, 185, 129, 0.15), inset 0 0 8px rgba(16, 185, 129, 0.05);
+            }
+
+            50% {
+                border-color: rgba(30, 58, 138, 0.6);
+                box-shadow: 0 0 25px rgba(30, 58, 138, 0.35), inset 0 0 12px rgba(30, 58, 138, 0.1);
+            }
+        }
+
+        .node-pulse-featured {
+            animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards, nodePulse 4s 0.8s infinite ease-in-out;
+        }
+    /* Blueprint Pattern for Right Panel */
+        .blueprint-pattern {
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        /* Scanner Line Animation */
+        @keyframes scan {
+            0% { top: 0%; opacity: 0; }
+            10% { opacity: 1; box-shadow: 0 0 15px 2px rgba(16, 185, 129, 0.5); }
+            90% { opacity: 1; box-shadow: 0 0 15px 2px rgba(16, 185, 129, 0.5); }
+            100% { top: 100%; opacity: 0; }
+        }
+        .animate-scan {
+            animation: scan 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+
+<body class="grid-bg min-h-full flex flex-col justify-between text-brand-deepBlue bg-teal-50/40">
+
+    <main class="flex-grow flex items-center px-6 lg:px-16 py-10 lg:py-16 relative max-w-7xl mx-auto w-full z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center w-full relative">
+
+            <div class="lg:col-span-6 space-y-8 z-10 text-left pr-4">
+                <div
+                    class="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-50 to-teal-50 border border-emerald-100/80 px-4 py-1.5 rounded-full shadow-sm">
+                    <span class="w-1.5 h-1.5 rounded-full bg-brand-mintGreen animate-pulse"></span>
+                    <span class="text-[10px] font-extrabold uppercase tracking-widest text-teal-800">Precision
+                        Biomimetics</span>
+                </div>
+
+                <div class="space-y-4">
+                    <h1
+                        class="text-4xl sm:text-5xl lg:text-[3.5rem] leading-[1.1] font-extrabold text-brand-deepBlue tracking-tight">
+                        Ujjawal Dental Clinic <br>
+                        <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-brand-royalBlue via-blue-900 to-brand-mintGreen">
+                            and Implant Centre
+                        </span>
+                    </h1>
+                    <p class="text-base lg:text-lg text-slate-500 font-medium leading-relaxed max-w-xl">
+                        Expert Dental Care and Modern Implants. Experience biomimetic technology, micro-engineered
+                        precision, and gentle, specialist-led procedures.
+                    </p>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-4 pt-2 max-w-md sm:max-w-none">
+                    <button onclick="openBookingModal()"
+                        class="group relative bg-brand-deepBlue text-white hover:bg-slate-900 px-8 py-4 rounded-xl font-semibold text-sm transition-all duration-300 shadow-lg shadow-brand-deepBlue/10 hover:shadow-brand-deepBlue/20 flex items-center justify-center gap-3">
+                        <span class="relative z-10">Book Your Consultation</span>
+                        <div
+                            class="w-7 h-7 rounded-lg bg-white/10 flex items-center justify-center group-hover:translate-x-1 transition-transform">
+                            <i class="fa-solid fa-calendar-check text-brand-mintGreen text-xs"></i>
+                        </div>
+                    </button>
+
+                    <button onclick="openSpecialistsModal()"
+                        class="group bg-white hover:bg-slate-50 border border-slate-200 text-slate-600 px-8 py-4 rounded-xl font-semibold text-sm transition-all duration-300 flex items-center justify-center gap-3">
+                        <span>Meet Our Specialists</span>
+                        <i
+                            class="fa-solid fa-user-doctor text-slate-400 group-hover:text-brand-mintGreen transition-colors"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="lg:col-span-6 flex items-center justify-center relative w-full" id="rightImplantPanel">
+                <div
+                    class="absolute w-80 h-80 rounded-full bg-brand-mintLight/30 blur-3xl -top-10 -right-10 pointer-events-none">
+                </div>
+                <div
+                    class="absolute w-80 h-80 rounded-full bg-blue-100/20 blur-3xl -bottom-10 -left-10 pointer-events-none">
+                </div>
+
+                <div
+                    class="relative w-full bg-white rounded-3xl p-3 border border-slate-100 shadow-xl shadow-slate-200/50 overflow-hidden flex items-center justify-center group">
+
+                    <img src="Gemini_Generated_Image_1dosde1dosde1dos.png" alt="Dental Diagnostic Illustration"
+                        class="w-full h-auto object-contain block rounded-2xl transition-all duration-500 group-hover:opacity-95 group-hover:scale-[1.01] pointer-events-none">
+
+                    <div id="teethHighlightOverlay"
+                        class="absolute top-[30%] right-[32%] w-[22%] h-[30%] rounded-full border-2 border-dashed border-blue-500/0 bg-blue-500/0 pointer-events-none transition-all duration-300 z-10 flex items-center justify-center">
+                        <div class="w-full h-full rounded-full bg-blue-500/10 scale-75 opacity-0 transition-all duration-300 mix-blend-multiply"
+                            id="teethGlow"></div>
+                    </div>
+                    <!-- Dot Button With Glow -->
+                    <div class="absolute bottom-[17%] left-[54%] z-20 group/spot cursor-help">
+                        <div
+                            class="w-5 h-5 rounded-full bg-white border border-slate-100 shadow-md flex items-center justify-center relative transition-transform duration-300 group-hover/spot:scale-110">
+                            <span class="absolute w-full h-full rounded-full bg-emerald-400/40 node-pulse"></span>
+                            <span class="w-2 h-2 rounded-full bg-emerald-500 relative z-10"></span>
+                        </div>
+                        <div
+                            class="hidden group-hover/spot:block absolute bottom-7 left-1/2 -translate-x-1/2 w-52 bg-brand-deepBlue/95 backdrop-blur-md text-white p-3.5 rounded-2xl shadow-2xl text-[11px] z-30 border border-slate-800 space-y-1">
+                            <span class="font-bold block text-brand-mintGreen tracking-wide">Intraoral 3D Imaging</span>
+                            <span class="text-slate-300 text-[10px] block leading-relaxed">Captures clean digital
+                                records instantly, removing the need for conventional messy paste impressions.</span>
+                        </div>
+                    </div>
+                    <!-- Teeth Glow Hotspot button-->
+                    <div class="absolute top-[17%] left-[40%] z-20 group/spot cursor-help"
+                        onmouseenter="document.getElementById('teethHighlightOverlay').classList.add('border-blue-500/60'); document.getElementById('teethGlow').classList.remove('opacity-0', 'scale-75'); document.getElementById('teethGlow').classList.add('opacity-100', 'scale-100');"
+                        onmouseleave="document.getElementById('teethHighlightOverlay').classList.remove('border-blue-500/60'); document.getElementById('teethGlow').classList.remove('opacity-100', 'scale-100');  document.getElementById('teethGlow').classList.add('opacity-0', 'scale-75');">
+
+                        <div
+                            class="w-7 h-7 rounded-xl bg-white border border-blue-200 shadow-md flex items-center justify-center relative transition-all duration-300 group-hover/spot:scale-110 group-hover/spot:border-blue-500 group-hover/spot:shadow-blue-200/50">
+                            <span class="absolute w-full h-full rounded-xl bg-blue-400/30 node-pulse"></span>
+                            <i
+                                class="fa-solid fa-tooth text-blue-600 text-xs relative z-10 transition-colors group-hover/spot:text-blue-700"></i>
+                        </div>
+
+                        <div
+                            class="hidden group-hover/spot:block absolute top-9 left-1/2 -translate-x-1/2 w-52 bg-brand-deepBlue/95 backdrop-blur-md text-white p-3.5 rounded-2xl shadow-2xl text-[11px] z-30 border border-slate-800 space-y-1">
+                            <span class="font-bold block text-blue-400 tracking-wide">Biomimetic Charting</span>
+                            <span class="text-slate-300 text-[10px] block leading-relaxed">Intelligent cross-referencing
+                                maps teeth segments instantly to track precise treatment variations over time.</span>
+                        </div>
+                    </div>
+                    <!-- Capsule Shaped Button Badge with Pulse Glow -->
+                    <div class="absolute top-[11%] right-[30%] z-20 group/spot cursor-help">
+                        <div
+                            class="w-7 h-7 rounded-xl bg-white border border-teal-200 shadow-md flex items-center justify-center relative transition-all duration-300 group-hover/spot:scale-110 group-hover/spot:border-teal-500 group-hover/spot:shadow-teal-200/50">
+                            <span class="absolute w-full h-full rounded-xl bg-teal-400/30 node-pulse"></span>
+                            <div
+                                class="w-4 h-2 rounded-full border border-teal-600 bg-gradient-to-r from-blue-500 to-emerald-400 -rotate-45 relative z-10">
+                            </div>
+                        </div>
+                        <div
+                            class="hidden group-hover/spot:block absolute top-9 right-0 w-52 bg-brand-deepBlue/95 backdrop-blur-md text-white p-3.5 rounded-2xl shadow-2xl text-[11px] z-30 border border-slate-800 space-y-1">
+                            <span class="font-bold block text-teal-400 tracking-wide">Micro-Engineered Implants</span>
+                            <span class="text-slate-300 text-[10px] block leading-relaxed">Using advanced biocompatible
+                                materials to map and match the exact anatomy of your jawbone structural dynamics.</span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="absolute -bottom-6 right-4 text-[9px] text-slate-400 font-bold tracking-widest flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 rounded-full bg-brand-mintGreen"></span>
+                        <span>INTELLIGENT DIAGNOSTIC MANAGEMENT SYSTEM</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main> 
+
+    <section class="relative w-full py-20 px-4 sm:px-6 lg:px-8 bg-white/20 border-t border-slate-100 overflow-hidden">
+        <div class="max-w-7xl mx-auto relative z-10">
+
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-mintLight/60 text-brand-royalBlue text-xs font-semibold uppercase tracking-wider mb-4 border border-brand-mintGreen/20">
+                    <svg class="w-4 h-4 text-brand-mintGreen animate-pulse" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                        </path>
+                    </svg>
+                    Verified Patient Feedback
+                </div>
+                <h2 class="text-4xl sm:text-5xl font-extrabold text-brand-deepBlue tracking-tight mb-4">Patient
+                    Testimonials</h2>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-3 text-slate-600 font-medium">
+                    <div
+                        class="flex items-center gap-1.5 bg-white py-1 px-3.5 rounded-full shadow-sm border border-slate-100">
+                        <span class="text-yellow-500 flex items-center">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                        </span>
+                        <span class="font-bold text-brand-deepBlue text-sm">Rating: 5.0 / 5.0</span>
+                    </div>
+                    <span
+                        class="text-sm bg-brand-royalBlue/5 px-3 py-1 rounded-full text-slate-500 font-semibold">(Based
+                        on 277+ patient ratings)</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <div
+                    class="group relative bg-white/75 backdrop-blur-md border border-slate-100 p-8 rounded-2xl shadow-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-brand-mintGreen/30 overflow-hidden">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-brand-mintGreen rounded-l-2xl"></div>
+                    <h3 class="text-4xl font-extrabold text-brand-deepBlue mb-2 flex items-baseline gap-0.5">
+                        <span class="counter" data-target="277">0</span><span
+                            class="text-brand-mintGreen font-bold">+</span>
+                    </h3>
+                    <p class="text-slate-600 font-semibold">Happy Patients served with absolute excellence</p>
+                </div>
+                <div
+                    class="group relative bg-white/75 backdrop-blur-md border border-slate-100 p-8 rounded-2xl shadow-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-brand-royalBlue/20 overflow-hidden">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-brand-royalBlue rounded-l-2xl"></div>
+                    <h3 class="text-4xl font-extrabold text-brand-deepBlue mb-2 flex items-baseline gap-0.5">
+                        <span class="counter-float" data-target="5.0">0.0</span>
+                    </h3>
+                    <p class="text-slate-600 font-semibold">Average Google & Local Rating verified</p>
+                </div>
+                <div
+                    class="group relative bg-white/75 backdrop-blur-md border border-slate-100 p-8 rounded-2xl shadow-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-brand-mintGreen/30 overflow-hidden">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-brand-mintGreen rounded-l-2xl"></div>
+                    <h3 class="text-4xl font-extrabold text-brand-deepBlue mb-2 flex items-baseline gap-0.5">
+                        <span class="counter" data-target="100">0</span><span
+                            class="text-brand-mintGreen font-bold">%</span>
+                    </h3>
+                    <p class="text-slate-600 font-semibold">Satisfaction & Pain-Free Dental Treatment</p>
+                </div>
+            </div>
+
+            <div class="flex justify-end items-center mb-8 border-b border-slate-200/60 pb-6">
+                <button onclick="toggleReviewModal(true)"
+                    class="flex items-center gap-2 px-5 py-2.5 bg-brand-royalBlue hover:bg-brand-deepBlue text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition-all shrink-0">
+                    Write a Review
+                </button>
+            </div>
+
+            <div id="testimonials-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+        </div>
+    </section>
+    <section id="services" class="relative py-16 lg:py-20 bg-teal-50/40 font-sans overflow-hidden border-t border-slate-100">
+        <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center mb-12">
+                <span class="text-brand-mintGreen font-bold tracking-wider uppercase text-sm mb-2 block">Our Expertise</span>
+                <h2 class="text-4xl md:text-5xl font-extrabold text-brand-deepBlue tracking-tight">Clinic Dashboard</h2>
+                <p class="text-slate-500 mt-4 max-w-2xl mx-auto font-medium text-lg">Integrated technological workflows designed for premium patient outcomes and absolute precision.</p>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-3 md:gap-4 mb-10" role="tablist" aria-label="Clinical Services">
+                <button onclick="switchTab('implants')" id="tab-implants" class="tab-btn px-6 md:px-8 py-3 rounded-full bg-brand-deepBlue text-white font-semibold text-sm transition-all shadow-md focus:outline-none">
+                    Implants
+                </button>
+                <button onclick="switchTab('endodontics')" id="tab-endodontics" class="tab-btn px-6 md:px-8 py-3 rounded-full bg-white border border-slate-200 text-slate-600 font-semibold text-sm hover:border-brand-mintGreen hover:text-brand-mintGreen hover:shadow-sm transition-all focus:outline-none">
+                    Endodontics
+                </button>
+                <button onclick="switchTab('cosmetic')" id="tab-cosmetic" class="tab-btn px-6 md:px-8 py-3 rounded-full bg-white border border-slate-200 text-slate-600 font-semibold text-sm hover:border-brand-mintGreen hover:text-brand-mintGreen hover:shadow-sm transition-all focus:outline-none">
+                    Cosmetic
+                </button>
+                <button onclick="switchTab('diagnostics')" id="tab-diagnostics" class="tab-btn px-6 md:px-8 py-3 rounded-full bg-white border border-slate-200 text-slate-600 font-semibold text-sm hover:border-brand-mintGreen hover:text-brand-mintGreen hover:shadow-sm transition-all focus:outline-none">
+                    Diagnostics
+                </button>
+            </div>
+
+            <div class="bg-white/80 backdrop-blur-md rounded-3xl shadow-[0_20px_50px_-12px_rgba(15,23,42,0.1)] p-6 sm:p-10 lg:p-12 node-pulse-featured w-full">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                    
+                    <div class="lg:col-span-6 space-y-8">
+                        <div>
+                            <div id="service-tag" class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-mintLight text-brand-mintGreen text-xs font-bold mb-4">
+                                <i class="fa-solid fa-bolt"></i> NEXT-GEN PROTOCOL
+                            </div>
+                            <h3 id="service-title" class="text-3xl sm:text-4xl font-extrabold text-brand-deepBlue mb-4 leading-tight">
+                                Precision <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-deepBlue to-brand-mintGreen">Implantology</span>
+                            </h3>
+                            <p id="service-desc" class="text-slate-600 text-lg leading-relaxed">
+                                Utilizing 3D CBCT scanning and AI-driven surgical guides, our implant procedures ensure unparalleled accuracy, minimal invasiveness, and rapid aesthetic recovery.
+                            </p>
+                        </div>
+
+                        <ul id="service-features" class="space-y-4">
+                            </ul>
+
+                        <div class="flex flex-col sm:flex-row items-center gap-6 pt-4 border-t border-slate-100">
+                            <button onclick="openBookingModal()" class="w-full sm:w-auto bg-brand-deepBlue hover:bg-slate-800 text-white px-8 py-3.5 rounded-xl font-bold shadow-lg shadow-brand-deepBlue/20 transition-all transform hover:-translate-y-0.5">
+                                Schedule Consultation
+                            </button>
+                            
+                            <div class="flex items-center gap-3 bg-white border border-slate-200 rounded-xl px-4 py-3 shadow-sm w-full sm:w-auto justify-center">
+                                <div class="relative flex h-3 w-3">
+                                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-mintGreen opacity-75"></span>
+                                  <span class="relative inline-flex rounded-full h-3 w-3 bg-brand-mintGreen"></span>
+                                </div>
+                                <div class="flex flex-col">
+                                    <span class="text-[10px] text-slate-400 font-bold uppercase tracking-wider leading-none mb-1">Performance Metric</span>
+                                    <span id="service-metric" class="font-extrabold text-brand-deepBlue text-sm leading-none">Success Rate: 99.4%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-6 h-full min-h-[450px]">
+                        <div class="relative bg-brand-deepBlue rounded-2xl h-full w-full overflow-hidden flex flex-col justify-between p-6 sm:p-8 border border-slate-800 shadow-2xl group">
+                            
+                            <div class="absolute inset-0 blueprint-pattern opacity-30 pointer-events-none"></div>
+                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-brand-mintGreen/10 blur-[80px] rounded-full pointer-events-none"></div>
+
+                            <div class="relative z-10 flex justify-between items-start w-full">
+                                <div id="gfx-badge-left" class="bg-white/10 backdrop-blur-md border border-white/20 text-white text-[10px] sm:text-xs font-bold px-3 py-1.5 rounded-full tracking-wider">
+                                    AI-ASSISTED
+                                </div>
+                                <div class="bg-brand-mintGreen/10 backdrop-blur-md border border-brand-mintGreen/30 text-brand-mintGreen text-[10px] sm:text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-2 tracking-wider">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-brand-mintGreen animate-pulse"></span>
+                                    LIVE SYNC
+                                </div>
+                            </div>
+
+                            <div class="relative z-10 flex-1 flex items-center justify-center w-full py-12">
+                                <div class="relative w-40 h-40 sm:w-48 sm:h-48">
+                                    <div class="absolute inset-0 border-[3px] border-slate-700 rounded-full animate-[spin_8s_linear_infinite]"></div>
+                                    <div class="absolute inset-4 border-[2px] border-dashed border-brand-mintGreen/40 rounded-full animate-[spin_12s_linear_infinite_reverse]"></div>
+                                    <div class="absolute inset-8 border border-slate-600 rounded-full"></div>
+                                    
+                                    <div class="absolute inset-0 flex items-center justify-center text-white/90 transform group-hover:scale-110 transition-transform duration-500">
+                                        <i id="center-icon" class="fa-solid fa-tooth text-5xl text-brand-mintLight/80"></i>
+                                    </div>
+                                    
+                                    <div class="absolute left-0 right-0 h-0.5 bg-brand-mintGreen animate-scan z-20"></div>
+                                </div>
+                            </div>
+
+                            <div class="relative z-10 mt-auto border-t border-slate-700/80 pt-5 flex justify-between items-end w-full">
+                                <div>
+                                    <p class="text-[9px] sm:text-[10px] text-brand-mintGreen font-mono tracking-[0.25em] mb-1.5">INTELLIGENT DIAGNOSTIC SYSTEM</p>
+                                    <p id="gfx-sys-ver" class="text-[10px] sm:text-xs text-slate-400 font-mono flex items-center gap-2">
+                                        SYS.VER. 4.0.9 <span class="text-slate-600">|</span> SECURE
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <div id="review-modal"
+        class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm opacity-0 pointer-events-none transition-all duration-300">
+    </div>
+
+    <div id="toast-message"
+        class="fixed bottom-6 right-6 z-50 transform translate-y-12 opacity-0 pointer-events-none transition-all duration-300 bg-brand-deepBlue border border-brand-mintGreen/30 text-white rounded-xl shadow-2xl p-4 flex items-center gap-3 max-w-sm">
+    </div>
+
+    <div id="bookingModal"
+        class="fixed inset-0 bg-slate-950/60 backdrop-blur-sm z-50 flex items-center justify-center hidden opacity-0 transition-opacity duration-300 p-4">
+        <div
+            class="bg-white rounded-3xl w-full max-w-lg overflow-hidden shadow-2xl transform scale-95 transition-transform duration-300 flex flex-col max-h-[90vh]">
+            <div class="p-6 bg-gradient-to-r from-brand-royalBlue to-brand-deepBlue text-white relative">
+                <button onclick="closeBookingModal()"
+                    class="absolute top-5 right-5 text-white/80 hover:text-white bg-white/10 hover:bg-white/20 w-8 h-8 rounded-full flex items-center justify-center transition-all">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <span class="text-brand-mintGreen text-xs font-bold uppercase tracking-widest block mb-1">Modern
+                    Diagnostics</span>
+                <h3 class="text-xl font-bold">Schedule Your Implant Consultation</h3>
+                <p class="text-slate-300 text-[11px] mt-1">Submit your info for a custom 3D computer-guided restoration
+                    plan with lead specialists.</p>
+            </div>
+
+            <form onsubmit="handleBookingSubmit(event)" class="p-6 space-y-4 overflow-y-auto text-xs">
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="space-y-1">
+                        <label class="text-slate-500 font-bold">Full Name <span class="text-rose-500">*</span></label>
+                        <input type="text" required placeholder="John Doe"
+                            class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-brand-mintGreen transition-colors text-slate-800 text-xs">
+                    </div>
+                    <div class="space-y-1">
+                        <label class="text-slate-500 font-bold">Contact Number <span
+                                class="text-rose-500">*</span></label>
+                        <input type="tel" required placeholder="+1 (555) 000-0000"
+                            class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-brand-mintGreen transition-colors text-slate-800 text-xs">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="space-y-1">
+                        <label class="text-slate-500 font-bold">Desired Treatment</label>
+                        <select
+                            class="w-full px-3 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-brand-mintGreen bg-white text-slate-800 text-xs">
+                            <option>Single Premium Implant</option>
+                            <option>All-on-4 Structural Arch</option>
+                            <option>Advanced Ceramic Veneers</option>
+                        </select>
+                    </div>
+                    <div class="space-y-1">
+                        <label class="text-slate-500 font-bold">Preferred Date</label>
+                        <input type="date" required
+                            class="w-full px-3 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-brand-mintGreen text-slate-800 text-xs">
+                    </div>
+                </div>
+
+                <button type="submit"
+                    class="w-full bg-brand-deepBlue hover:bg-slate-900 text-white font-bold py-3.5 rounded-xl transition-all shadow-md flex items-center justify-center gap-3 mt-4">
+                    <span>Confirm Consultation Request</span>
+                    <i class="fa-solid fa-arrow-right text-xs text-brand-mintGreen"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div id="specialistsModal"
+        class="fixed inset-0 bg-slate-950/60 backdrop-blur-sm z-50 flex items-center justify-center hidden opacity-0 transition-opacity duration-300 p-4">
+        <div
+            class="bg-white rounded-3xl w-full max-w-md overflow-hidden shadow-2xl transform scale-95 transition-transform duration-300 flex flex-col max-h-[85vh]">
+            <div class="p-6 border-b border-slate-100 flex items-center justify-between">
+                <div>
+                    <span class="text-brand-mintGreen text-xs font-bold uppercase tracking-wider block">Clinical
+                        Team</span>
+                    <h3 class="text-lg font-bold text-brand-deepBlue">Lead Specialist</h3>
+                </div>
+                <button onclick="closeSpecialistsModal()"
+                    class="text-slate-400 hover:text-slate-600 bg-slate-50 w-8 h-8 rounded-full flex items-center justify-center transition-all">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="p-6 space-y-4 bg-slate-50">
+                <div class="bg-white border border-slate-100 p-4 rounded-2xl flex gap-4 shadow-sm">
+                    <div
+                        class="w-16 h-16 rounded-xl bg-gradient-to-tr from-brand-royalBlue to-teal-800 flex items-center justify-center text-white shrink-0 shadow-inner">
+                        <i class="fa-solid fa-user-doctor text-2xl"></i>
+                    </div>
+                    <div class="space-y-1">
+                        <h4 class="font-bold text-slate-950 text-sm">Dr. Devendra Ujjawal</h4>
+                        <p class="text-brand-mintGreen font-semibold text-xs">Chief Oral Implant Surgeon</p>
+                        <p class="text-slate-400 text-[10px] leading-relaxed">18+ years experience. Expert in
+                            bio-integrated osseointegration and complex reconstructive dental engineering.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-4 border-t border-slate-100 flex items-center justify-between bg-white">
+                <span class="text-[10px] text-slate-400">Board-Certified Clinical Experts</span>
+                <button onclick="openBookingModal(); closeSpecialistsModal();"
+                    class="bg-brand-deepBlue hover:bg-slate-900 text-white text-xs font-bold px-4 py-2 rounded-xl transition-all">
+                    Consult Lead Dr.
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="toastNotification"
+        class="fixed bottom-6 left-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 max-w-sm w-full bg-brand-deepBlue text-white p-4 rounded-2xl shadow-xl flex items-start gap-3 border border-slate-800 pointer-events-none">
+        <div class="p-2 bg-brand-mintGreen/20 text-brand-mintGreen rounded-xl">
+            <i class="fa-solid fa-circle-check text-base"></i>
+        </div>
+        <div>
+            <span class="font-bold text-xs block text-slate-100">Consultation Scheduled</span>
+            <span class="text-[10px] text-slate-400 block mt-1 leading-snug" id="toastMessage">Your appointment request
+                was registered. Dr. Ujjawal's desk will reach out shortly.</span>
+        </div>
+    </div>
+
+    <script>
+        function openBookingModal() {
+            const modal = document.getElementById('bookingModal');
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                modal.querySelector('.transform').classList.remove('scale-95');
+                modal.querySelector('.transform').classList.add('scale-100');
+            }, 50);
+        }
+
+        function closeBookingModal() {
+            const modal = document.getElementById('bookingModal');
+            modal.classList.add('opacity-0');
+            modal.querySelector('.transform').classList.add('scale-95');
+            modal.querySelector('.transform').classList.remove('scale-100');
+            setTimeout(() => {
+                modal.classList.add('hidden'); // Fixed wrapper assignment
+            }, 300);
+        }
+
+        // Open Specialists Modal
+        function openSpecialistsModal() {
+            const modal = document.getElementById('specialistsModal');
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                modal.querySelector('.transform').classList.remove('scale-95');
+                modal.querySelector('.transform').classList.add('scale-100');
+            }, 50);
+        }
+
+        // Close Specialists Modal
+        function closeSpecialistsModal() {
+            const modal = document.getElementById('specialistsModal');
+            modal.classList.add('opacity-0');
+            modal.querySelector('.transform').classList.add('scale-95');
+            modal.querySelector('.transform').classList.remove('scale-100');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        }
+
+        // Handle Booking Consultation Submission
+        function handleBookingSubmit(event) {
+            event.preventDefault();
+            const patientName = event.target.elements[0].value || "Patient";
+            const toastMessage = document.getElementById('toastMessage');
+            toastMessage.innerHTML = `Thank you <strong>${patientName}</strong>. Your consultation file has been sent to our coordinators. We'll call you back soon.`;
+            closeBookingModal();
+            triggerToastNotification();
+        }
+
+        // Trigger notification toast
+        function triggerToastNotification() {
+            const toast = document.getElementById('toastNotification');
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 6000);
+        }
+        // THIS IS YOUR PAGE LOAD LISTENER
+        window.addEventListener('DOMContentLoaded', function () {
+            renderTestimonials(currentReviews);
+            switchTab('implants'); // Injected initializer line
+        });
+        // Testimonials Integration Engine
+        const initialReviews = [
+            { id: 1, name: 'Princy', comment: 'Good RCT, advanced dental treatment, timely treatment with no pain, and very nice staff.', rating: 5, tag: 'rct', tagName: 'Root Canal (RCT)', isFeatured: true },
+            { id: 2, name: 'Rahul Sharma', comment: 'Superb precision during my dental implant. Dr. Ujjawal uses high-tech imaging which made the entire placement painless and fast.', rating: 5, tag: 'implants', tagName: 'Dental Implant', isFeatured: false },
+            { id: 3, name: 'Karan Mehra', comment: 'The hygienic environment here is amazing. Extremely polite staff and zero waiting time during teeth deep cleaning.', rating: 5, tag: 'general', tagName: 'General Dental Care', isFeatured: false }
+        ];
+
+        let currentReviews = [...initialReviews];
+        let currentFormStars = 5;
+
+        function toggleReviewModal(show) {
+            const modal = document.getElementById('review-modal');
+            const card = modal.querySelector('div');
+            if (show) {
+                modal.classList.remove('opacity-0', 'pointer-events-none');
+                card.classList.remove('translate-y-4');
+                document.getElementById('feedback-form').reset();
+                setFormStars(5);
+                updateLivePreview();
+            } else {
+                modal.classList.add('opacity-0', 'pointer-events-none');
+                card.classList.add('translate-y-4');
+            }
+        }
+
+        function updateLivePreview() {
+            const nameInput = document.getElementById('form-name').value || 'Patient Name';
+            const tagSelect = document.getElementById('form-tag');
+            const tagText = tagSelect.options[tagSelect.selectedIndex].text;
+            const commentInput = document.getElementById('form-comment').value || '"Write your clinical experience..."';
+
+            document.getElementById('preview-name').innerText = nameInput;
+            document.getElementById('preview-tag').innerText = tagText;
+            document.getElementById('preview-text').innerText = `"${commentInput}"`;
+
+            const starContainer = document.getElementById('preview-stars');
+            starContainer.innerHTML = '';
+            for (let i = 0; i < currentFormStars; i++) {
+                starContainer.innerHTML += `<svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>`;
+            }
+        }
+
+        function setFormStars(count) {
+            currentFormStars = count;
+            document.querySelectorAll('.star-selector').forEach((btn, idx) => {
+                const svg = btn.querySelector('svg');
+                if (idx < count) { svg.classList.remove('text-slate-300'); svg.classList.add('text-yellow-500'); }
+                else { svg.classList.remove('text-yellow-500'); svg.classList.add('text-slate-300'); }
+            });
+            updateLivePreview();
+        }
+
+        function submitReview(e) {
+            e.preventDefault();
+            const tagSelect = document.getElementById('form-tag');
+            const newReview = {
+                id: Date.now(),
+                name: document.getElementById('form-name').value,
+                comment: document.getElementById('form-comment').value,
+                rating: currentFormStars,
+                tag: tagSelect.value,
+                tagName: tagSelect.options[tagSelect.selectedIndex].text,
+                isFeatured: false
+            };
+            currentReviews.splice(1, 0, newReview);
+            renderTestimonials(currentReviews);
+            toggleReviewModal(false);
+
+            const toast = document.getElementById('toast-message');
+            toast.classList.remove('translate-y-12', 'opacity-0', 'pointer-events-none');
+            setTimeout(() => toast.classList.add('translate-y-12', 'opacity-0', 'pointer-events-none'), 4000);
+        }
+
+        function renderTestimonials(list) {
+            const container = document.getElementById('testimonials-grid');
+            if (!container) return;
+            container.innerHTML = '';
+
+            list.forEach((item, index) => {
+                let starSVGs = '';
+                for (let i = 0; i < item.rating; i++) {
+                    starSVGs += `<svg class="w-4 h-4 fill-current text-yellow-500" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>`;
+                }
+
+                const customClasses = item.isFeatured
+                    ? 'node-pulse-featured border-brand-mintGreen bg-white shadow-2xl relative border-2'
+                    : 'border-slate-100 hover:border-slate-200 hover:shadow-2xl hover:-translate-y-1 bg-white/80 border';
+
+                const ribbon = item.isFeatured ? `<span class="absolute -top-3 right-4 bg-brand-mintGreen text-white text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-widest flex items-center gap-1 shadow-md"><span class="w-1.5 h-1.5 rounded-full bg-white animate-ping"></span> Featured Story</span>` : '';
+
+                container.innerHTML += `
+            <div class="group relative rounded-2xl p-6 backdrop-blur-md transition-all duration-300 ${customClasses}" style="animation-delay: ${index * 150}ms;">
+                ${ribbon}
+                <div class="flex items-center gap-1.5 mb-4">${starSVGs}</div>
+                <p class="text-slate-700 font-medium text-sm leading-relaxed mb-6 italic">"${item.comment}"</p>
+                <div class="flex justify-between items-end border-t border-slate-100/80 pt-4">
+                    <div>
+                        <h4 class="font-extrabold text-brand-deepBlue text-sm flex items-center gap-1.5">${item.name}</h4>
+                        <span class="text-xs text-slate-400 font-semibold">Patient / Verified Partner</span>
+                    </div>
+                    <span class="text-[10px] font-bold text-brand-royalBlue bg-brand-royalBlue/5 border border-brand-royalBlue/10 px-2.5 py-1 rounded-full uppercase tracking-wider">${item.tagName}</span>
+                </div>
+            </div>`;
+            });
+        }
+
+        function startCountUps() {
+            document.querySelectorAll('.counter').forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                let count = 0;
+                const step = Math.ceil(target / 100);
+                const timer = setInterval(() => {
+                    count += step;
+                    if (count >= target) { counter.innerText = target; clearInterval(timer); }
+                    else { counter.innerText = count; }
+                }, 15);
+            });
+
+            document.querySelectorAll('.counter-float').forEach(float => {
+                const target = parseFloat(float.getAttribute('data-target'));
+                let current = 0.0;
+                const interval = setInterval(() => {
+                    if (current < target) { current += 0.1; float.innerText = current.toFixed(1); }
+                    else { float.innerText = target.toFixed(1); clearInterval(interval); }
+                }, 40);
+            });
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+        // Initialize ScrollTrigger
+        gsap.registerPlugin(ScrollTrigger);
+
+        window.addEventListener('load', () => {
+
+            /* ==========================================
+               1. THE LOAD ANIMATION (Hero Section)
+               Instead of a basic fade, we use a 3D tilt 
+               unfolding effect with a springy ease.
+               ========================================== */
+            const tl = gsap.timeline({ defaults: { ease: "back.out(1.5)", duration: 1 } });
+
+            // Animate the left text side sequentially
+            tl.fromTo(".lg\\:col-span-6.z-10 > div",
+                { y: 60, opacity: 0, rotationX: 45, transformPerspective: 500 },
+                { y: 0, opacity: 1, rotationX: 0, stagger: 0.2, duration: 1.2 }
+            )
+                // Animate the right implant panel (slides in and scales)
+                .fromTo("#rightImplantPanel",
+                    { scale: 0.7, opacity: 0, x: 100 },
+                    { scale: 1, opacity: 1, x: 0, duration: 1.5, ease: "power3.out" },
+                    "-=0.8" // This makes it overlap with the text animation
+                );
+
+
+            /* ==========================================
+               2. SCROLL-DRIVEN ANIMATION (Stats & Reviews)
+               Elements stay hidden until the user scrolls 
+               to them, then they pop up dynamically.
+               ========================================== */
+
+            // Animate the 3 Stats Cards
+            // Animate each Stats Card and its number independently on scroll
+            gsap.utils.toArray(".md\\:grid-cols-3 > div").forEach((card) => {
+                // Find the specific counter element inside this card
+                const counterElement = card.querySelector('[data-target]');
+                
+                if (counterElement) {
+                    const targetValue = counterElement.getAttribute('data-target');
+                    const isFloat = counterElement.classList.contains('counter-float');
+
+                    gsap.fromTo(card,
+                        { y: 100, opacity: 0, scale: 0.9 },
+                        {
+                            y: 0,
+                            opacity: 1,
+                            scale: 1,
+                            duration: 0.8,
+                            ease: "back.out(1.2)",
+                            scrollTrigger: {
+                                trigger: card,
+                                start: "top 85%", 
+                                // "restart" replays the animation on scroll down, "reset" prepares it for next time
+                                toggleActions: "restart none none reset", 
+                                onEnter: () => {
+                                    // Start counting this specific number
+                                    runSingleCounter(counterElement, targetValue, isFloat);
+                                },
+                                onLeaveBack: () => {
+                                    // Reset the number visually back to zero when scrolled away
+                                    counterElement.innerText = isFloat ? "0.0" : "0";
+                                }
+                            }
+                        }
+                    );
+                }
+            });
+
+            // Animate the Testimonial Header
+            gsap.fromTo(".max-w-3xl.mx-auto.mb-16",
+                { y: 50, opacity: 0 },
+                {
+                    y: 0, opacity: 1, duration: 1,
+                    scrollTrigger: {
+                        trigger: ".max-w-3xl.mx-auto.mb-16",
+                        start: "top 90%"
+                    }
+                }
+            );
+        });
+        // Helper function to animate numbers individually
+        function runSingleCounter(element, target) {
+            if (element.classList.contains('counter-float')) {
+                const targetFloat = parseFloat(target);
+                let current = 0.0;
+                element.innerText = "0.0";
+                const interval = setInterval(() => {
+                    if (current < targetFloat) {
+                        current += 0.1;
+                        element.innerText = current.toFixed(1);
+                    } else {
+                        element.innerText = targetFloat.toFixed(1);
+                        clearInterval(interval);
+                    }
+                }, 40);
+            } else {
+                const targetInt = +target;
+                let count = 0;
+                element.innerText = "0";
+                const step = Math.ceil(targetInt / 30); // Controls speed of count up
+                const timer = setInterval(() => {
+                    count += step;
+                    if (count >= targetInt) {
+                        element.innerText = targetInt;
+                        clearInterval(timer);
+                    } else {
+                        element.innerText = count;
+                    }
+                }, 25);
+            }
+        }
+       
+       // Helper function to animate numbers individually
+        function runSingleCounter(element, target, isFloat) {
+            // Clear any existing intervals on this element to prevent overlapping loops
+            if (element.countingInterval) clearInterval(element.countingInterval);
+
+            if (isFloat) {
+                const targetFloat = parseFloat(target);
+                let current = 0.0;
+                element.innerText = "0.0";
+                
+                element.countingInterval = setInterval(() => {
+                    if (current < targetFloat) { 
+                        current += 0.1; 
+                        element.innerText = current.toFixed(1); 
+                    } else { 
+                        element.innerText = targetFloat.toFixed(1); 
+                        clearInterval(element.countingInterval); 
+                    }
+                }, 40);
+            } else {
+                const targetInt = parseInt(target, 10);
+                let count = 0;
+                element.innerText = "0";
+                const step = Math.ceil(targetInt / 25); // Step value for speed
+                
+                element.countingInterval = setInterval(() => {
+                    count += step;
+                    if (count >= targetInt) { 
+                        element.innerText = targetInt; 
+                        clearInterval(element.countingInterval); 
+                    } else { 
+                        element.innerText = count; 
+                    }
+                }, 30);
+            }
+        }
+       const servicesData = {
+            implants: {
+                tag: '<i class="fa-solid fa-bolt"></i> NEXT-GEN PROTOCOL',
+                title: 'Precision <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-royalBlue to-brand-mintGreen">Implantology</span>',
+                desc: 'Utilizing 3D CBCT scanning and AI-driven surgical guides, our implant procedures ensure unparalleled accuracy, minimal invasiveness, and rapid aesthetic recovery.',
+                metric: 'Success Rate: 99.4%',
+                leftBadge: 'AI-ASSISTED',
+                sysVer: 'SYS.VER. 4.0.9 <span class="text-slate-600">|</span> SECURE',
+                iconClass: 'fa-solid fa-tooth',
+                features: [
+                    { title: 'Sub-millimeter Surgical Accuracy', desc: 'Guided placement utilizing custom 3D printed resin stents.' },
+                    { title: 'Biocompatible Titanium Matrix', desc: 'Accelerated osseointegration with surface-treated fixtures.' }
+                ]
+            },
+            endodontics: {
+                tag: '<i class="fa-solid fa-microscope"></i> MICROSCOPIC ACCURACY',
+                title: 'Biomimetic <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-royalBlue to-brand-mintGreen">Endodontics</span>',
+                desc: 'Advanced automated Root Canal Therapy (RCT) prioritized around pain elimination and conserving your original tooth structural dynamics.',
+                metric: 'Pain-Free Index: 98.9%',
+                leftBadge: 'HD ENDOSCOPIC',
+                sysVer: 'ROOT.SYS. 1.2.0 <span class="text-slate-600">|</span> DIGITAL',
+                iconClass: 'fa-solid fa-wave-square',
+                features: [
+                    { title: 'Electronic Apex Localization', desc: 'Real-time micro-measurements for impeccable canal cleaning.' },
+                    { title: '3D Warm Obturation', desc: 'Hermetic, bio-inert sealing prevents future localized infections.' }
+                ]
+            },
+            cosmetic: {
+                tag: '<i class="fa-solid fa-wand-magic-sparkles"></i> DIGITAL DESIGN',
+                title: 'Computer-Aided <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-royalBlue to-brand-mintGreen">Cosmetic Design</span>',
+                desc: 'Transform your facial symmetry with porcelain veneers and premium custom smile profiles planned through immediate 3D diagnostic previews.',
+                metric: 'Satisfaction Rate: 100%',
+                leftBadge: '3D PREVIEW',
+                sysVer: 'VISUAL.CORE. 8.1 <span class="text-slate-600">|</span> ULTRA-HD',
+                iconClass: 'fa-solid fa-wand-magic-sparkles',
+                features: [
+                    { title: 'Ultra-Thin Ceramic Veneers', desc: 'Minimal structural adjustments required to achieve elite brilliance.' },
+                    { title: 'Laser Contour Shaping', desc: 'Precise modifications for perfectly balanced, elegant smiles.' }
+                ]
+            },
+            diagnostics: {
+                tag: '<i class="fa-solid fa-magnifying-glass-chart"></i> PROPHYLAXIS',
+                title: 'Intelligent <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-royalBlue to-brand-mintGreen">Deep Diagnostics</span>',
+                desc: 'Preventative monitoring utilizing intraoral imaging radars and automated laser calculus detection arrays before deep conditions manifest.',
+                metric: 'Early Detection: 99.8%',
+                leftBadge: 'RADAR SCAN',
+                sysVer: 'DIAG.NET. 3.0.5 <span class="text-slate-600">|</span> ACTIVE',
+                iconClass: 'fa-solid fa-chart-line',
+                features: [
+                    { title: 'Ultrasonic Calculus Scrapers', desc: 'Pain-free, high-frequency deep tissue microbiome care.' },
+                    { title: 'Fluorescence Caries Imaging', desc: 'Detects microscopic enamel variations cleanly without heavy radiation.' }
+                ]
+            }
+        };
+
+        function switchTab(serviceKey) {
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.className = "tab-btn px-6 md:px-8 py-3 rounded-full bg-white border border-slate-200 text-slate-600 font-semibold text-sm hover:border-brand-mintGreen hover:text-brand-mintGreen hover:shadow-sm transition-all focus:outline-none";
+            });
+            const activeTab = document.getElementById(`tab-${serviceKey}`);
+            activeTab.className = "tab-btn px-6 md:px-8 py-3 rounded-full bg-brand-deepBlue text-white font-semibold text-sm transition-all shadow-md focus:outline-none";
+
+            const data = servicesData[serviceKey];
+
+            document.getElementById('service-tag').innerHTML = data.tag;
+            document.getElementById('service-title').innerHTML = data.title;
+            document.getElementById('service-desc').innerText = data.desc;
+            document.getElementById('service-metric').innerText = data.metric;
+            document.getElementById('gfx-badge-left').innerText = data.leftBadge;
+            document.getElementById('gfx-sys-ver').innerHTML = data.sysVer;
+            
+            document.getElementById('center-icon').className = `${data.iconClass} text-5xl text-brand-mintLight/80`;
+
+            const listContainer = document.getElementById('service-features');
+            listContainer.innerHTML = '';
+            data.features.forEach(feat => {
+                listContainer.innerHTML += `
+                    <li class="flex items-start gap-4 p-3 rounded-xl hover:bg-slate-50 transition-colors">
+                        <div class="w-8 h-8 rounded-full bg-brand-mintGreen/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <svg class="w-4 h-4 text-brand-mintGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        </div>
+                        <div>
+                            <h4 class="text-brand-deepBlue font-bold text-sm">${feat.title}</h4>
+                            <p class="text-slate-500 text-sm mt-1">${feat.desc}</p>
+                        </div>
+                    </li>
+                `;
+            });
+        }
+       </script>
+</body>
+
+</html>
